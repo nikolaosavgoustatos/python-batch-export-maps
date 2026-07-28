@@ -27,10 +27,10 @@ OUT_FOLDER = r"C:\Users\nick\Desktop\arcgis_pro_prjects\ANDOS_AVGOUSTATOS\map_ti
 # per element - they're just validated here so a missing one raises a clear
 # error instead of silently exporting an incomplete map. Set to None to skip
 # checking a given element if you didn't name it / don't want it checked.
-LEGEND_NAME = None          # e.g. "Legend" - main map legend (below main map)
-INSET_LEGEND_NAME = None    # e.g. "Legend 2" - geology inset legend
-NORTH_ARROW_NAME = None     # e.g. "North Arrow" - ArcGIS North 2, top-left of main map
-SCALE_BAR_NAME = None       # e.g. "Scale Bar" - Feet and Meters dual scale bar
+LEGEND_NAME = "Legend"          # e.g. "Legend" - main map legend (below main map)
+INSET_LEGEND_NAME = "Legend_1"    # e.g. "Legend 2" - geology inset legend
+NORTH_ARROW_NAME = "North_Arrow"     # e.g. "North Arrow" - ArcGIS North 2, top-left of main map
+SCALE_BAR_NAME = "Dual_Scale_Bar"       # e.g. "Scale Bar" - Feet and Meters dual scale bar
 
 # Full element list, As -> Zn, matching your Drawing Order screenshot
 ELEMENTS = [
@@ -64,7 +64,7 @@ def check_static_elements(layout):
         ("MAPFRAME_ELEMENT", INSET_MAP_FRAME_NAME, "geology inset map frame"),
         ("LEGEND_ELEMENT", LEGEND_NAME, "main legend"),
         ("LEGEND_ELEMENT", INSET_LEGEND_NAME, "inset legend"),
-        ("NORTH_ARROW_ELEMENT", NORTH_ARROW_NAME, "north arrow"),
+        ("MAPSURROUND_ELEMENT", NORTH_ARROW_NAME, "north arrow"),
         ("MAPSURROUND_ELEMENT", SCALE_BAR_NAME, "scale bar"),
     ]
 
